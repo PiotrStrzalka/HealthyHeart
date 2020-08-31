@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.automation.bear.healthyheartcamera.MainActivity">
+
+
+    <!--<com.automation.bear.healthyheartcamera.AutoFitTextureView-->
+    <!--android:id="@+id/texture"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--/>-->
+
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lastPeakTextV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+
+        android:text="TextView"
+        app:layout_constraintLeft_toRightOf="@id/texture"
+        app:layout_constraintTop_toBottomOf="@+id/peakTimeLstV" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+
+        android:text="Start"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRefresh"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="re"
+        app:layout_constraintRight_toRightOf="@id/button"
+        app:layout_constraintTop_toBottomOf="@id/button" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/button"
+        app:layout_constraintTop_toBottomOf="@id/button" />
+
+    <ListView
+        android:id="@+id/peakTimeLstV"
+        android:layout_width="150dp"
+        android:layout_height="47dp"
+        app:layout_constraintLeft_toRightOf="@id/texture"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average Y"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/texture" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph1"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/textView1"
+
+        />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Butter filter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/graph1" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph2"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:keepScreenOn="true"
+        android:text="Spline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/graph2" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph3"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+
+</android.support.constraint.ConstraintLayout>
